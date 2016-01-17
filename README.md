@@ -2,6 +2,8 @@
 
 music³ is a fast and elegant music player for windows phone.
 
+https://www.microsoft.com/en-us/store/apps/music/9nblggh0hjt2
+
 I do no longer have time to update and keep developing this app, but I will update it in the store if someone contributes to this project on github.
 
 ## Contributing
