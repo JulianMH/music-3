@@ -1,0 +1,33 @@
+﻿<local:FilterPivotItem
+    x:Class="MusicConcept.MusicFilters.SearchItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicConcept.MusicFilters"
+    xmlns:localroot="using:MusicConcept"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Name="thisItem"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <Grid Margin="0, -16, 0, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Visibility="{Binding CanChangeSelected, ElementName=thisItem, Converter={StaticResource BooleanVisibilityConverter}}">
+            <local:ShowOnMainPageCheckBox />
+        </Grid>
+
+        <TextBox Text="{Binding SearchString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+        <ListView ItemsSource="{Binding Items}" Padding="0,0,0,12" Grid.Row="2"
+                    ItemTemplateSelector="{StaticResource ListItemTemplateSelector}" ItemClick="ListView_ItemClick"
+                    SelectionMode="None" IsItemClickEnabled="True">
+            <ListView.Footer>
+                <Grid Height="200"/>
+            </ListView.Footer>
+        </ListView>
+        <ProgressBar IsIndeterminate="True" Grid.Row="2" Margin="6" Visibility="{Binding IsLoading, Converter={StaticResource BooleanVisibilityConverter}}" VerticalAlignment="Top" Height="12"/>
+        <localroot:EmptyListViewText Grid.Row="2" IsEmpty="{Binding ItemsIsEmpty}"/>
+    </Grid>
+</local:FilterPivotItem>

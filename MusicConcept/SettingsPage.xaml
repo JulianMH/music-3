@@ -1,0 +1,48 @@
+﻿<local:AppPage
+    x:Class="MusicConcept.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicConcept"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Pivot Title="music³" x:Uid="SettingsPagePivot">
+        <PivotItem Header="Settings" x:Uid="SettingsPageGeneralPivotItem">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--<TextBlock Grid.Row="0" Text="wallpaper" x:Uid="SettingsPageWallpaperHeader" Style="{StaticResource ControlHeaderTextBlockStyle}"/>
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Button Content="select from pictures" x:Uid="SettingsPageSelectWallpaperFromLibraryButton" Click="SelectWallpaperButton_Click"/>
+                <Button Content="reset" x:Uid="SettingsPageResetWallpaperButton"  Click="ResetWallpaperButton_Click"
+                        Visibility="{Binding IsBackgroundImageSet, Converter={StaticResource BooleanVisibilityConverter}}"/>
+                </StackPanel>-->
+                <TextBlock Grid.Row="2" Text="alphabet for sorting" x:Uid="SettingsPageAlphabetHeader" Style="{StaticResource ControlHeaderTextBlockStyle}"/>
+                <ItemsControl Grid.Row="3" ItemsSource="{Binding Alphabets}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <ToggleSwitch IsOn="{Binding IsEnabled, Mode=TwoWay}" Margin="0, -4">
+                                <ToggleSwitch.OffContent>
+                                    <TextBlock Margin="0, -8" Text="{Binding AlphabetLocalizedName}" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                                </ToggleSwitch.OffContent>
+                                <ToggleSwitch.OnContent>
+                                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="0, -8">
+                                        <TextBlock Text="{Binding AlphabetLocalizedName}" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                                        <TextBlock Text="{Binding Alphabet}" Style="{StaticResource BaseTextBlockStyle}" Opacity="0.5"/>
+                                    </StackPanel>
+                                </ToggleSwitch.OnContent>
+
+                            </ToggleSwitch>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Grid>
+        </PivotItem>
+    </Pivot>
+</local:AppPage>

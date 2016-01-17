@@ -1,0 +1,47 @@
+﻿<local:FilterPivotItem
+    x:Class="MusicConcept.MusicFilters.GenericItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicConcept.MusicFilters"
+    xmlns:localroot="using:MusicConcept"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Name="thisItem"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <local:FilterPivotItem.Resources>
+        <CollectionViewSource Source="{Binding Items}" IsSourceGrouped="True"
+                          x:Key="ItemsSource"/>
+    </local:FilterPivotItem.Resources>
+
+    <Grid>
+        <SemanticZoom Margin="0, -16, -20, 0">
+            <SemanticZoom.ZoomedInView>
+                <ListView ItemsSource="{Binding Source={StaticResource ItemsSource}}" Padding="0,0,0,12"
+                         ItemTemplateSelector="{StaticResource ListItemTemplateSelector}" ItemClick="ListView_ItemClick"
+                            SelectionMode="None" IsItemClickEnabled="True">
+                    <ListView.GroupStyle>
+                        <GroupStyle HidesIfEmpty="True" HeaderTemplate="{StaticResource ListViewGroupHeaderTemplate}"/>
+                    </ListView.GroupStyle>
+                    <ListView.Header>
+                        <Grid Visibility="{Binding CanChangeSelected, ElementName=thisItem, Converter={StaticResource BooleanVisibilityConverter}}">
+                            <local:ShowOnMainPageCheckBox />
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.Footer>
+                        <localroot:EmptyListViewText IsEmpty="{Binding Items.IsEmpty}"/>
+                    </ListView.Footer>
+                </ListView>
+            </SemanticZoom.ZoomedInView>
+            <SemanticZoom.ZoomedOutView>
+                <GridView Padding="14, 10"
+                                ItemsSource="{Binding Source={StaticResource ItemsSource}, Path=CollectionGroups}"
+                                ItemTemplate="{StaticResource ListViewGroupItemTemplate}">
+                    <GridView.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.5"/>
+                    </GridView.Background>
+                </GridView>
+            </SemanticZoom.ZoomedOutView>
+        </SemanticZoom>
+    </Grid>
+</local:FilterPivotItem>

@@ -1,0 +1,4 @@
+MainPackage=C:\Users\Julian\Code\music-3\MusicConcept\bin\ARM\Release\MusicConcept_2.0.0.0_ARM.appx
+SymbolPackage=C:\Users\Julian\Code\music-3\MusicConcept\AppPackages\MusicConcept_2.0.0.0_Test\MusicConcept_2.0.0.0_ARM.appxsym
+ResourcePack=C:\Users\Julian\Code\music-3\MusicConcept\bin\ARM\Release\MusicConcept_2.0.0.0_language-de.appx
+ResourcePack=C:\Users\Julian\Code\music-3\MusicConcept\bin\ARM\Release\MusicConcept_2.0.0.0_language-el.appx

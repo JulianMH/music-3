@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutAppBarButton.Label" xml:space="preserve">
+    <value>σχετικά με την εφαρμογή</value>
+  </data>
+  <data name="AboutPageHeaderText.Text" xml:space="preserve">
+    <value>πληροφορίες</value>
+  </data>
+  <data name="AboutPageIconsText.Text" xml:space="preserve">
+    <value>εικονίδια</value>
+  </data>
+  <data name="AboutPageProgrammingDesignText.Text" xml:space="preserve">
+    <value>προγραμματισμός, σχεδιασμός</value>
+  </data>
+  <data name="DatabaseSettingUpString" xml:space="preserve">
+    <value>Δημιουργία βιβλιοθήκης…</value>
+  </data>
+  <data name="EmptyListViewTextEmptyText.Text" xml:space="preserve">
+    <value>Δε βρέθηκαν αντικείμενα.</value>
+  </data>
+  <data name="EmptyListViewTextLoadingText.Text" xml:space="preserve">
+    <value>Δημιουργία βιβλιοθήκης. Η διαδικασία μπορεί να διαρκέσει μερικά λεπτά.</value>
+  </data>
+  <data name="NavigationFailedExceptionMessage" xml:space="preserve">
+    <value>Η πλοήγηση απέτυχε.</value>
+  </data>
+  <data name="NowPlayingPageCurrentText.Text" xml:space="preserve">
+    <value>Τρέχον</value>
+  </data>
+  <data name="NowPlayingPagePlaylistText.Text" xml:space="preserve">
+    <value>Λίστα αναπαραγωγής</value>
+  </data>
+  <data name="AlbumsItemHeader" xml:space="preserve">
+    <value>άλμπουμ</value>
+  </data>
+  <data name="ArtistsItemHeader" xml:space="preserve">
+    <value>καλλιτέχνες</value>
+  </data>
+  <data name="PivotPageNowPlayingText.Text" xml:space="preserve">
+    <value>Τρέχον</value>
+  </data>
+  <data name="AllSongsItemHeader" xml:space="preserve">
+    <value>κομμάτια</value>
+  </data>
+  <data name="SearchItemHeader" xml:space="preserve">
+    <value>αναζήτηση</value>
+  </data>
+  <data name="SearchItemProgressIndicator" xml:space="preserve">
+    <value>γίνεται αναζήτηση…</value>
+  </data>
+  <data name="LoadPlaylistAppBarButton.Label" xml:space="preserve">
+    <value>φόρτωση αποθηκευμένης λίστας αναπαραγωγής</value>
+  </data>
+  <data name="SavePlaylistAppBarButton.Label" xml:space="preserve">
+    <value>αποθήκευση τρέχουσας λίστας αναπαραγωγής</value>
+  </data>
+  <data name="MessageDialogNo" xml:space="preserve">
+    <value>όχι</value>
+  </data>
+  <data name="MessageDialogYes" xml:space="preserve">
+    <value>ναι</value>
+  </data>
+  <data name="SaveNewPlaylistNameEmpty" xml:space="preserve">
+    <value>Παρακαλώ εισάγετε τίτλο για τη νέα λίστα αναπαραγωγής</value>
+  </data>
+  <data name="SaveNewPlaylistNameExists" xml:space="preserve">
+    <value>Υπάρχει ήδη μια λίστα αναπαραγωγής με αυτό το όνομα. Επιθυμείτε να την αντικαταστήσετε;</value>
+  </data>
+  <data name="SaveNewPlaylistPageNameTextBlock.Text" xml:space="preserve">
+    <value>τίτλος</value>
+  </data>
+  <data name="SaveNewPlaylistPageTitle.Text" xml:space="preserve">
+    <value>αποθήκευση λίστας αναπαραγωγής</value>
+  </data>
+  <data name="SaveNewPlaylistPageCancel.Label" xml:space="preserve">
+    <value>άκυρο</value>
+  </data>
+  <data name="SaveNewPlaylistPageSave.Label" xml:space="preserve">
+    <value>αποθήκευση</value>
+  </data>
+  <data name="SavedPlaylistsViewModelDelete" xml:space="preserve">
+    <value>Επιθυμείτε να διαγράψετε τη λίστα αναπαραγωγής "{0}";</value>
+  </data>
+  <data name="MenuFlyoutDelete.Text" xml:space="preserve">
+    <value>διαγραφή</value>
+  </data>
+  <data name="VersionFormat" xml:space="preserve">
+    <value>έκδοση {0}</value>
+  </data>
+  <data name="AboutPageMailButton.Content" xml:space="preserve">
+    <value>mail υποστήριξης</value>
+  </data>
+  <data name="AboutPageWebsiteButton.Content" xml:space="preserve">
+    <value>επισκεφθείτε την ιστοσελίδα μας</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>music³</value>
+  </data>
+  <data name="TrialMessageDialog" xml:space="preserve">
+    <value>Σας ευχαριστούμε για τη λήψη της δοκιμαστικής έκδοσης του {0}.
+
+Αυτή τη στιγμή η δοκιμαστική έκδοση είναι παρόμοια με την πλήρη έκδοση, μόνο που η πλήρης έκδοση δεν περιέχει καθόλου διαφημίσεις.
+
+Εάν σας αρέσει αυτή η εφαρμογή, παρακαλώ σκεφτείτε να αγοράσετε την πλήρη έκδοση προκειμένου να υποστηρίξετε την ανάπτυξή της.</value>
+  </data>
+  <data name="TrialMessageDialogTitle" xml:space="preserve">
+    <value>δοκιμαστική έκδοση</value>
+  </data>
+  <data name="ErrorPageCloseButton.Content" xml:space="preserve">
+    <value>Όχι</value>
+  </data>
+  <data name="ErrorPageErrorDataLost" xml:space="preserve">
+    <value>Απώλεια δεδομένων σφάλματος.</value>
+  </data>
+  <data name="ErrorPageFirst.Text" xml:space="preserve">
+    <value>Λυπούμαστε πολύ! Αυτό το σφάλμα δε θα έπρεπε να έχει συμβεί.</value>
+  </data>
+  <data name="ErrorPageHeaderText.Text" xml:space="preserve">
+    <value>σφάλμα</value>
+  </data>
+  <data name="ErrorPageSecond.Text" xml:space="preserve">
+    <value>Θα επιθυμούσατε να μας στείλετε μια αναφορά σφάλματος προκειμένου να μας βοηθήσετε να επιλύσουμε το πρόβλημα σε επόμενη ενημέρωση;</value>
+  </data>
+  <data name="ErrorPageSendButton.Content" xml:space="preserve">
+    <value>Ναι, να σταλεί αναφορά σφάλματος!</value>
+  </data>
+  <data name="ErrorPageThird.Text" xml:space="preserve">
+    <value>Στην αναφορά δε θα συμπεριληφθούν δεδομένα σχετικά με τη βιβλιοθήκη μουσικής σας. Ενδέχεται να χρησιμοποιήσουμε τη διεύθυνση e-mail σας, προκειμένου να επικοινωνήσουμε μαζί με ερωτήσεις σχετικά με το σφάλμα που αντιμετωπίσατε. </value>
+  </data>
+  <data name="AllFiltersPageHeader.Text" xml:space="preserve">
+    <value>φιλτράρισμα μουσικής σύμφωνα με</value>
+  </data>
+  <data name="MusicFiltersAppBarButton.Label" xml:space="preserve">
+    <value>φιλτράρισμα μουσικής σύμφωνα με…</value>
+  </data>
+  <data name="PivotPageEmptyText.Text" xml:space="preserve">
+    <value>όλα τα φίλτρα μουσικής είναι κρυμμένα από την κεντρική σελίδα. Επιλέξτε " φιλτράρισμα μουσικής σύμφωνα με..." από τη γραμμή μενού της εφαρμογής και ενεργοποιήστε μερικά </value>
+  </data>
+  <data name="ShowOnMainPageCheckBox.Content" xml:space="preserve">
+    <value>προβολή στην κεντρική σελίδα</value>
+  </data>
+  <data name="PlaylistsItemHeader" xml:space="preserve">
+    <value>λίστες αναπαραγωγής</value>
+  </data>
+  <data name="MenuFlyoutAddToPlaylist.Text" xml:space="preserve">
+    <value>προσθήκη σε λίστα αναπαραγωγής</value>
+  </data>
+  <data name="MenuFlyoutListenNext.Text" xml:space="preserve">
+    <value>αναπαραγωγή ως επόμενο</value>
+  </data>
+  <data name="MenuFlyoutAddAllToPlaylist.Text" xml:space="preserve">
+    <value>προσθήκη όλων σε λίστα αναπαραγωγής</value>
+  </data>
+  <data name="MenuFlyoutListenNextAll.Text" xml:space="preserve">
+    <value>αναπαραγωγή ως επόμενο</value>
+  </data>
+  <data name="GenresItemHeader" xml:space="preserve">
+    <value>είδη μουσικής</value>
+  </data>
+  <data name="AlbumCoverFetchPageChoosePicture.Content" xml:space="preserve">
+    <value>επιλογή από τη βιβλιοθήκη εικόνων</value>
+  </data>
+  <data name="AlbumCoverFetchPageXboxMusic.Text" xml:space="preserve">
+    <value>εξώφυλλο άλμπουμ από το XBOX Music</value>
+  </data>
+  <data name="AlbumCoverFetchViewModelSaveCropError" xml:space="preserve">
+    <value>Σφάλμα στη χρήση της εικόνας ως εξώφυλλου άλμπουμ.
+Παρακαλώ δοκιμάστε με κάποια διαφορετική εικόνα.</value>
+  </data>
+  <data name="MenuFlyoutChangeAlbumCover.Text" xml:space="preserve">
+    <value>αλλαγή εξώφυλλου άλμπουμ</value>
+  </data>
+  <data name="RemoveAdsButton.Label" xml:space="preserve">
+    <value>αφαίρεση διαφημίσεων</value>
+  </data>
+  <data name="ReviewMessageContinuedDialog" xml:space="preserve">
+    <value>Θα θέλατε να γράψετε μια κριτική στο Windows Store ή να μας στείλετε ένα mail;</value>
+  </data>
+  <data name="ReviewMessageDialog" xml:space="preserve">
+    <value>Το {0} βρίσκεται ακόμη σε φάση ανάπτυξης και θα λάβει νέες δυνατότητες στο μέλλον.
+
+Θα μπορούσατε να μας γράψετε εάν σας αρέσει το {0} μέχρι τώρα;</value>
+  </data>
+  <data name="ReviewMessageDialogNo" xml:space="preserve">
+    <value>Όχι</value>
+  </data>
+  <data name="ReviewMessageDialogTitle" xml:space="preserve">
+    <value>feedback για το {0}</value>
+  </data>
+  <data name="ReviewMessageDialogYes" xml:space="preserve">
+    <value>Ναι</value>
+  </data>
+  <data name="ReviewMessageMail" xml:space="preserve">
+    <value>μήνυμα</value>
+  </data>
+  <data name="ReviewMessageReview" xml:space="preserve">
+    <value>κριτική</value>
+  </data>
+  <data name="ClearPlaylistAppBarButton.Label" xml:space="preserve">
+    <value>καθαρισμός λίστας αναπαραγωγής</value>
+  </data>
+  <data name="AlphabetCyrillic" xml:space="preserve">
+    <value>κυριλλική</value>
+  </data>
+  <data name="AlphabetGreek" xml:space="preserve">
+    <value>ελληνική</value>
+  </data>
+  <data name="AlphabetLatin" xml:space="preserve">
+    <value>λατινική</value>
+  </data>
+  <data name="SettingsButton.Label" xml:space="preserve">
+    <value>ρυθμίσεις</value>
+  </data>
+  <data name="SettingsPageAlphabetHeader.Text" xml:space="preserve">
+    <value>αλφάβητο για ταξινόμηση</value>
+  </data>
+  <data name="SettingsPageGeneralPivotItem.Header" xml:space="preserve">
+    <value>ρυθμίσεις</value>
+  </data>
+  <data name="SettingsPagePivot.Title" xml:space="preserve">
+    <value>music³</value>
+  </data>
+  <data name="SettingsPageResetWallpaperButton.Content" xml:space="preserve">
+    <value>επαναφορά</value>
+  </data>
+  <data name="SettingsPageSelectWallpaperFromLibraryButton.Content" xml:space="preserve">
+    <value>επιλογή από τη συλλογή εικόνων</value>
+  </data>
+  <data name="SettingsPageWallpaperHeader.Text" xml:space="preserve">
+    <value>φόντο</value>
+  </data>
+  <data name="AboutPageTranslation.Text" xml:space="preserve">
+    <value>μετάφραση</value>
+  </data>
+  <data name="AboutPageTranslation.Visibility" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="AboutPageTranslationPerson.Text" xml:space="preserve">
+    <value>Harris Stamatis</value>
+  </data>
+  <data name="AboutPageTranslationPerson.Visibility" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="SongUnknownArtist" xml:space="preserve">
+    <value>Άγνωστος καλλιτέχνης</value>
+  </data>
+  <data name="OpenSourceLookAt" xml:space="preserve">
+    <value>open link</value>
+  </data>
+  <data name="OpenSourceMessage" xml:space="preserve">
+    <value>{0} is now an open source project and free in the store. I am afraid I do not have enough time myself to keep making updates for this app. So if you want to have a look at the code or maybe even write new features, here is the link to the project {1}.</value>
+  </data>
+  <data name="OpenSourceOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+</root>

@@ -1,0 +1,75 @@
+﻿<local:AppPage
+    x:Class="MusicConcept.PivotPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicConcept"
+    xmlns:filters="using:MusicConcept.MusicFilters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:MusicConcept.Data"
+    xmlns:commands="using:MusicConcept.Commands"
+    mc:Ignorable="d" x:Name="thisPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <local:AppPage.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <CommonNavigationTransitionInfo IsStaggeringEnabled="True"/>
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </local:AppPage.Transitions>
+    <local:AppPage.Resources>
+        <commands:NavigateToCommand NavigationFrame="{Binding Frame, ElementName=thisPage}" x:Key="NavigateToCommand"/>
+        <commands:ShowInStoreCommand x:Key="ShowInStoreCommand"/>
+        <filters:FilterViewModelsToPivotItemsConverter NavigationFrame="{Binding Frame, ElementName=thisPage}" x:Key="FilterViewModelToPivotItemConverter"/>
+    </local:AppPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="45"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Rectangle Opacity="0.6" Grid.Row="0" Grid.RowSpan="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="{Binding BackgroundImage}" Stretch="UniformToFill"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Pivot Grid.Row="1" Margin="0, -30, 0, 24"
+               ItemsSource="{Binding SelectedFilters, Converter={StaticResource FilterViewModelToPivotItemConverter}}">
+            <Pivot.TitleTemplate>
+                <DataTemplate/>
+            </Pivot.TitleTemplate>
+        </Pivot>
+        <TextBlock Grid.Row="1" Grid.RowSpan="2"  Margin="18" Visibility="{Binding SelectedFiltersEmpty, Converter={StaticResource BooleanVisibilityConverter}}" x:Uid="PivotPageEmptyText"
+                   Style="{StaticResource ListViewEmptyStaticTextBlockStyle}" Text="all music filters are hidden from the main page. Touch music filters in the app bar menu and select some of them to be visible again."/>
+        <Grid Tapped="NowPlaying_Tapped"
+				Visibility="{Binding IsNowPlayingLoaded, Converter={StaticResource BooleanVisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="119*"/>
+                <ColumnDefinition Width="281*"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.RowSpan="2" Grid.ColumnSpan="2" Opacity="0.65" Fill="{Binding NowPlayingAlbum.AlbumCover}"/>
+            <TextBlock Margin="18,28,0,0" Grid.RowSpan="2" x:Uid="PivotPageNowPlayingText" Text="Now Playing"
+                       Style="{ThemeResource TitleTextBlockStyle}" Typography.Capitals="SmallCaps"/>
+            <local:ScrollTextControl Margin="12,28,0,0" Grid.Column="1" LongText="{Binding NowPlaying.Name}" HorizontalAlignment="Stretch"
+                       TextStyle="{StaticResource BaseTextBlockStyle}"/>
+            <local:ScrollTextControl Margin="12,6,0,6" Grid.Column="1" Grid.Row="1" LongText="{Binding NowPlaying.ArtistAndAlbum}"  HorizontalAlignment="Stretch"
+                       VerticalAlignment="Top" TextStyle="{StaticResource ListViewItemSubheaderTextBlockStyle}"/>
+        </Grid>
+    </Grid>
+    <local:AppPage.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Uid="MusicFiltersAppBarButton" Label="music filters" Command="{StaticResource NavigateToCommand}" CommandParameter="MusicConcept.AllFiltersPage"/>
+                <AppBarButton x:Uid="SettingsButton" Label="settings" Command="{StaticResource NavigateToCommand}" CommandParameter="MusicConcept.SettingsPage"/>
+                <AppBarButton x:Uid="AboutAppBarButton" Label="about the app" Command="{StaticResource NavigateToCommand}" CommandParameter="MusicConcept.AboutPage"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </local:AppPage.BottomAppBar>
+</local:AppPage>
