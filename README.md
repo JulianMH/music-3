@@ -8,9 +8,9 @@ I do no longer have time to update and keep developing this app, but I will upda
 
 ## Contributing
 
-If you want to add features, feel to do so and submit a pull request. Or you just fork it and build your own music player app.
+If you want to add features, feel to do so and submit a pull request. Or you can just fork it and build your own music player app.
 
-No Idea where to start? Here are some things that could to be done:
+No Idea where to start? Here are some things that could be done:
 
 - windows 10 compatibility (ideally as an universal app)
 - exporting and importing playlists
