@@ -15,7 +15,7 @@ No Idea where to start? Here are some things that could to be done:
 - better tools to edit playlists
 - tools to edit song metadata
 - translate comments in the code which are still in german to english
-- 
+
 ## License
 
 The project is under MIT license. Check out the LICENSE text file for details.
